@@ -868,6 +868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VoidZone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4563631299368137325, guid: 3b00543bbb6f40d45aba920017b63770, type: 3}
+      propertyPath: strength
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6601433210722746246, guid: 3b00543bbb6f40d45aba920017b63770, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.34
@@ -4270,6 +4274,10 @@ PrefabInstance:
     - target: {fileID: 3371268337771883175, guid: 3b00543bbb6f40d45aba920017b63770, type: 3}
       propertyPath: m_Name
       value: VoidZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563631299368137325, guid: 3b00543bbb6f40d45aba920017b63770, type: 3}
+      propertyPath: strength
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6601433210722746246, guid: 3b00543bbb6f40d45aba920017b63770, type: 3}
       propertyPath: m_LocalPosition.x
