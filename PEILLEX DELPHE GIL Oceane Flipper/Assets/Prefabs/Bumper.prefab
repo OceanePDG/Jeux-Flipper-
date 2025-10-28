@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1868c7e7d2bca684e9f1af4bd2d38550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 1
+  strength: 2
   scoreToAdd: 10
   anim: {fileID: 4614026903089194638}
 --- !u!111 &4614026903089194638
