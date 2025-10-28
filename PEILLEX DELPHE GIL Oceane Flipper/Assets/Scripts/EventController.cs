@@ -9,7 +9,15 @@ public class EventController : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         onTriggerEnterEvent.Invoke();
+    }
+
+    void OnTriggerExit(Collider other)
+    {
         onTriggerExitEvent.Invoke();
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
         onCollisionEnterEvent.Invoke();
     }
     
