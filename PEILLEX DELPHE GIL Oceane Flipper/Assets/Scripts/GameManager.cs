@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public KeyCode menuKey = KeyCode.Escape;
     public bool isMenuOpen;
     public GameObject menuGO;
+    
     public void Start()
     {
         CreateBall();
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("Game Over");
+            GameOver();
         }
 
         
@@ -72,5 +74,17 @@ public class GameManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 1;
+        Application.LoadLevel("GameOver");
+    }
+    
+    public void WinGame()
+    {
+        Time.timeScale = 1;
+        Application.LoadLevel("GameWin");
     }
 }
