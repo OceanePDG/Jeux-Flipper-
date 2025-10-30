@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 7400000, guid: 14cd730a50a25c9449d83ee6ec4e0ba6, type: 2}
     - target: {fileID: 8816317524650092595, guid: d1c8537a0316ec64ab71914d8970d1f3, type: 3}
       propertyPath: strength
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8816317524650092595, guid: d1c8537a0316ec64ab71914d8970d1f3, type: 3}
       propertyPath: scoreToAdd
