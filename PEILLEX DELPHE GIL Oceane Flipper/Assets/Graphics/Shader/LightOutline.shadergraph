@@ -256,7 +256,7 @@
     "m_ObjectId": "0060470c34c047c0ac23b00f216a5f1d",
     "m_Title": "Outline",
     "m_Position": {
-        "x": -1727.9998779296875,
+        "x": -1728.0,
         "y": 289.00006103515627
     }
 }
@@ -414,7 +414,7 @@
     "m_ObjectId": "0d8d521291244f67a9e8f28a2fddf1b6",
     "m_Title": "Background Base",
     "m_Position": {
-        "x": -1332.9998779296875,
+        "x": -1333.0,
         "y": -301.0
     }
 }
@@ -1388,7 +1388,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"09a95dbcb0cc3d7489334ec95b16034d\",\"type\":3}}",
+        "m_SerializedTexture": "",
         "m_Guid": ""
     },
     "isMainTexture": false,
