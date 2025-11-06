@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0adc951f08ef6744bb97395afeb1d4a6, type: 2}
+  - {fileID: 2100000, guid: 951a5a30c04d12140a7a274c791a59d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,7 +124,13 @@ MonoBehaviour:
   ballsTransforms: []
   strength: 1
   scoreToAdd: 20
-  strenghtBalls: 2
+  strengthBalls: 2
+  key: 32
+  spamTime: 1
+  spamThreehold: 3
+  time: 0
+  rb: {fileID: 0}
+  gravity: -1.6
 --- !u!1 &1937047424179649849
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +256,13 @@ MonoBehaviour:
   ballsTransforms: []
   strength: 1
   scoreToAdd: 10
-  strenghtBalls: 2
+  strengthBalls: 2
+  key: 32
+  spamTime: 1
+  spamThreehold: 3
+  time: 0
+  rb: {fileID: 0}
+  gravity: -1.6
 --- !u!114 &7680988442242192896
 MonoBehaviour:
   m_ObjectHideFlags: 0
