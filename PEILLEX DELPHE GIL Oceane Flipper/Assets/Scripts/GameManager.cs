@@ -1,15 +1,22 @@
 using System;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public int BallCount = 3;
     public GameObject ballPrefab;
     public GameObject Spawner;
+    
     public KeyCode menuKey = KeyCode.Escape;
     public bool isMenuOpen;
     public GameObject menuGO;
+    public GameObject gameOver;
+    public GameObject gameWin;
+    
+    public int targetScore = 1000;
+    public ScoreManager scoreManager;
     
     public void Start()
     {
@@ -18,21 +25,22 @@ public class GameManager : MonoBehaviour
 
     public void LoseBall(GameObject Ball)
     {
-        BallCount--;
-        //Debug.Log("Lose Ball, ball left : " + BallCount );
-        
+        if (Ball.CompareTag("Ball"))
+        {
+            BallCount--;
+            //Debug.Log("Lose Ball, ball left : " + BallCount );
+            if (BallCount > 0)
+            {
+                CreateBall();
+            }
+            else
+            {
+                Debug.Log("Game Over");
+                GameOver();
+            }
+        }
         Destroy(Ball);
-        if (BallCount > 0)
-        {
-            CreateBall();
-        }
-        else
-        {
-            Debug.Log("Game Over");
-            GameOver();
-        }
-
-        
+        Debug.Log("ball destroy");
     }
     void CreateBall()
     {
@@ -46,7 +54,14 @@ public class GameManager : MonoBehaviour
         {
             ChangeMenuState();
         }
+
+        if (scoreManager != null && scoreManager.score >= targetScore)
+        {
+            Debug.Log("Niveau terminé !");
+            WinGame();
+        }
     }
+
 
     public void ChangeMenuState()
     {
@@ -64,9 +79,10 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void Restart()
+    public void RestartInGame()
     {
-        Application.LoadLevel(Application.loadedLevel);
+       //Application.LoadLevel(Application.loadedLevel);
+       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
         
     }
@@ -79,12 +95,12 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 1;
-        Application.LoadLevel("GameOver");
+        gameOver.SetActive(gameOver);
     }
     
     public void WinGame()
     {
         Time.timeScale = 1;
-        Application.LoadLevel("GameWin");
+        gameWin.SetActive(gameWin);
     }
 }
